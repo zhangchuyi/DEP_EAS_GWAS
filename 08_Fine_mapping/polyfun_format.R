@@ -6,7 +6,7 @@ ref = fread("Merge_FuDan_6021MDD_7318ctrl.indqc.snpqc.hg38.R2_03.snpqc.rmUnmap.r
 ref = ref[,c(2,5,6)]
 names(ref)[1] = "SNP"
 
-name = read.table("/me4012/zcy/1.GWAS/11.ALL_ASA_MDD_CTRL/FuDan_imputation/Final_Sample/compare_Other_traits/MTAG/name.txt",header = F)
+name = read.table("{path_to_work_dir}/compare_Other_traits/MTAG/name.txt",header = F)
 for(i in name){
     a = fread(paste0(i,".zscore.N.txt"),header = T)
     a = left_join(a,ref)
@@ -23,9 +23,9 @@ for(i in name){
 }
 
 conda activate polyfun
-# for i in `cat /me4012/zcy/1.GWAS/11.ALL_ASA_MDD_CTRL/FuDan_imputation/Final_Sample/compare_Other_traits/MTAG/name.txt`; do  python /home/lilab/software/polyfun/extract_snpvar.py --sumstats ${i}.forPolyfun.txt --allow-missing --out ${i}.Polyfun.snps_with_var; done
+# for i in `cat {path_to_work_dir}/compare_Other_traits/MTAG/name.txt`; do  python /home/lilab/software/polyfun/extract_snpvar.py --sumstats ${i}.forPolyfun.txt --allow-missing --out ${i}.Polyfun.snps_with_var; done
 
-file = read.table("/me4012/zcy/1.GWAS/11.ALL_ASA_MDD_CTRL/FuDan_imputation/Final_Sample/compare_Other_traits/MTAG/name.txt",header = F)
+file = read.table("{path_to_work_dir}/compare_Other_traits/MTAG/name.txt",header = F)
 
 library(dplyr)
 library(data.table)

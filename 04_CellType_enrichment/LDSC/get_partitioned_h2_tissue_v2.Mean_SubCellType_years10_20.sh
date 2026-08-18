@@ -12,9 +12,9 @@ weights="1000G_Phase3_EAS_weights_hm3_no_MHC/weights.EAS.hm3_noMHC."
 frq="1000G_Phase3_EAS_plinkfiles/1000G.EAS.QC."
 all_annotations="1000G_Phase3_EAS_baselineLD_v2.2"
 
-cd /me4012/zcy/1.GWAS/11.ALL_ASA_MDD_CTRL/FuDan_imputation/Final_Sample_forNHB_202509/cellType_LDSC 
+cd {path_to_work_dir}/cellType_LDSC 
 k="Mean_SubCellType_years10_20"
-cd /me4012/zcy/1.GWAS/11.ALL_ASA_MDD_CTRL/FuDan_imputation/Final_Sample_forNHB_202509/cellType_LDSC/${k}
+cd {path_to_work_dir}/cellType_LDSC/${k}
 for f in *_tissue_dir 
 do
 	echo $f

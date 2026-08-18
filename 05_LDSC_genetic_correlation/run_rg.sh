@@ -3,7 +3,7 @@
 # LDSC v1.0.1 — genome-wide genetic correlations of EAS DEP with other
 # phenotypes in East Asians
 # =============================================================================
-# Command flags taken verbatim from the retained rg logs (see logs/).
+# Command flags as used in the study.
 # The 46 phenotypes are listed in LDSC.pheno. Reference: 1000 Genomes EAS
 # panel. Traits with FDR < 0.05 were reported as significantly correlated.
 #
@@ -11,7 +11,7 @@
 #   bash LDSC_summary_QC.sh   (MHC removal, A/T & G/C removal, munge_sumstats)
 # =============================================================================
 
-REF_LDSC=/path/to/reference/eas_ldscores   # original: /home/lilab/reference/eas_ldscores/
+REF_LDSC={path_to_ldsc_ref}/eas_ldscores
 DEP_SUMSTATS=sorted_meta_mdd2023diverse_EAS_Neff-ourHan_l-r_dosage_allCovar-TPMI_mdd.Diff-Model.I85.LDSC.sumstats.gz
 
 while read pheno; do
@@ -23,4 +23,5 @@ while read pheno; do
         --w-ld-chr ${REF_LDSC}/
 done < LDSC.pheno
 
-# Collect results (see merge_LDSC_result.sh for the original parsing)
+# Collect results (genetic correlation, Z-score, P) from the per-trait logs
+# into a single table.

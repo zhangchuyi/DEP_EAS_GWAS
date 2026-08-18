@@ -9,9 +9,8 @@ Reference panel: 1000 Genomes EAS ancestry.
 | File | Description |
 |---|---|
 | `polyfun.input` | Locus list for `finemapper.py` (chr, start, end, output) — MTAG loci. |
-| `format_polyfun_sumstats.R` | Stand-alone R script (arg-parsed): step 1 = allele-matching of GWAS/MTAG summary statistics against the LD reference .bim (flips Z for strand-flipped SNPs, drops ambiguous), writes PolyFun input; step 2 = merges PolyFun `SNPVAR` back by CHR+BP. |
-| `polyfun_format.R` | Original interactive version of the same formatting steps (kept as the raw record). |
-| `run_polyfun_priors.sh` | **Reconstructed** chain: `extract_snpvar.py` → merge → `munge_polyfun_ldsc.py` → `polyfun.py --compute-h2-L2`. |
+| `polyfun_format.R` | Allele-matching of GWAS/MTAG summary statistics against the LD reference .bim (flips Z for strand-flipped SNPs, drops ambiguous); writes the PolyFun input (`.forPolyfun.txt`) and, after `extract_snpvar.py`, merges PolyFun `SNPVAR` back by CHR+BP (`.finemap_sumstats.addSNPVAR.txt`). |
+| `run_polyfun_priors.sh` | **Reconstructed** chain: `polyfun_format.R` → `extract_snpvar.py` → `munge_polyfun_ldsc.py` → `polyfun.py --compute-h2-L2`. |
 | `polyfun.sh` | Per-locus fine-mapping with `finemapper.py` (`--method susie --max-num-causal 5`); 95 % credible sets = smallest set of SNPs with cumulative PIP > 0.95. |
 
 Downstream: the highest-PIP SNP of each credible set was annotated with

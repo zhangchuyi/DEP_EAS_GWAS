@@ -2,11 +2,11 @@
 # =============================================================================
 # MTAG — Multi-Trait Analysis of GWAS (DEP + 3 of 5 ancillary traits)
 # =============================================================================
-# RECONSTRUCTED: wraps the actual mtag.py invocation (see MTAG_example.sh)
-# over all C(5,3)=10 four-trait combinations listed in all_combo.txt, as
-# described in the Methods. maxFDR was computed for DEP in each run
-# (mtag.py --fdr); the model with the lowest maxFDR (DEP-SZ-BD-INSO) was
-# selected as the primary model.
+# RECONSTRUCTED: wraps the actual mtag.py invocation over all C(5,3)=10
+# four-trait combinations listed in all_combo.txt, as described in the
+# Methods. maxFDR was computed for DEP in each run (mtag.py --fdr); the
+# model with the lowest maxFDR (DEP-SZ-BD-INSO) was selected as the
+# primary model.
 #
 # Ancillary traits (EAS): anxiety disorder, insomnia, bipolar disorder,
 # schizophrenia, suicide. Study-specific effective sample sizes (N) and

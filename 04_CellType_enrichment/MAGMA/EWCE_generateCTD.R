@@ -23,19 +23,19 @@ write.table(cellnumber,paste0("Cell_number_Filter100Cellnumber_",name,".tsv"),qu
 }
 
 for(name in region){
-	a = get(load(paste0("/home/lilab/zhangchu1/1.GWAS/MAGMA_Celltype_Enrich/Human_BrainCell_Atlas/ctd_Filter100Cellnumber_",name,".rda")))
+	a = get(load(paste0("{path_to_project}/Human_BrainCell_Atlas/ctd_Filter100Cellnumber_",name,".rda")))
 	ep = as.data.frame(a[[1]]$mean_exp)
 	ep$Gene = rownames(ep)
 	ep = ep[,c(dim(ep)[2],1:(dim(ep)[2]-1))]
-	write.csv(ep,paste0("/home/lilab/zhangchu1/1.GWAS/MAGMA_Celltype_Enrich/Human_BrainCell_Atlas/ctd_Filter100Cellnumber_",name,".mean_express.csv"),row.names = F,quote = F)
+	write.csv(ep,paste0("{path_to_project}/Human_BrainCell_Atlas/ctd_Filter100Cellnumber_",name,".mean_express.csv"),row.names = F,quote = F)
 }
 
 
 for(exp_prefix in region){
-exp = read_csv(paste0("/home/lilab/zhangchu1/1.GWAS/MAGMA_Celltype_Enrich/Human_BrainCell_Atlas/ctd_Filter100Cellnumber_",exp_prefix,".mean_express.csv"))
+exp = read_csv(paste0("{path_to_project}/Human_BrainCell_Atlas/ctd_Filter100Cellnumber_",exp_prefix,".mean_express.csv"))
 exp <- exp %>% gather(CellType, Exp, -Gene)
 
-gene_coordinates <- read.table("/home/lilab/zhangchu1/1.GWAS/MAGMA_Celltype_Enrich/NCBI37.3.gene.loc.extendedMHCexcluded", header=F, stringsAsFactors = F) %>%
+gene_coordinates <- read.table("{path_to_project}/NCBI37.3.gene.loc.extendedMHCexcluded", header=F, stringsAsFactors = F) %>%
 mutate(start=ifelse(V3-100000<0,0,V3-100000),end=V4+100000,V1=as.character(V1)) %>%
 select(2,start,end,1) %>%
 as.tibble() %>%
@@ -55,7 +55,7 @@ exp_CT <- inner_join(exp_CT, ensembl2entrez, by="Gene")
 exp_CT <- inner_join(exp_CT, gene_coordinates, by="ENTREZ")
 n_genes <- length(unique(exp_CT$ENTREZ))
 n_genes_to_keep <- (n_genes * 0.1) %>% round()
-save(exp_CT, file = paste("/home/lilab/zhangchu1/1.GWAS/MAGMA_Celltype_Enrich/Human_BrainCell_Atlas/",exp_prefix,".Rdata", sep=""))
+save(exp_CT, file = paste("{path_to_project}/Human_BrainCell_Atlas/",exp_prefix,".Rdata", sep=""))
 
 magma_top10 <- function(d,Cell_type){
     d_spe <- d %>% group_by_(Cell_type) %>% top_n(.,n_genes_to_keep,specificity)

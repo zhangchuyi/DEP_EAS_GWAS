@@ -14,9 +14,9 @@ in the order the analyses appear in the Methods section.
 
 | Folder | Methods section | Main software |
 |---|---|---|
-| [`01_QC_GWAS_data/`](01_QC_GWAS_data/) | Quality control for GWAS data; Genotype imputation | PLINK v2.0, EIGENSTRAT v7.1.2 (SHAPEIT5 / Minimac4 not retained) |
+| [`01_QC_GWAS_data/`](01_QC_GWAS_data/) | Quality control for GWAS data; Genotype imputation | PLINK v1.9, EIGENSTRAT v7.1.2 (SHAPEIT5 / Minimac4 not retained) |
 | [`02_LDSC_heritability/`](02_LDSC_heritability/) | LD score regression heritability estimation | LDSC v1.0.1 |
-| [`03_GWAS_statistical_analysis/`](03_GWAS_statistical_analysis/) | Statistical analysis in GWAS samples | PLINK v2.0, PLINK v1.90b6.20, locuszoomr v0.3.8 |
+| [`03_GWAS_statistical_analysis/`](03_GWAS_statistical_analysis/) | Statistical analysis in GWAS samples | PLINK v2.0 (dosage-based association), PLINK v1.9 (meta-analysis, clumping), locuszoomr v0.3.8 |
 | [`04_CellType_enrichment/`](04_CellType_enrichment/) | Enrichment analysis (tissue & cell type) | MAGMA v1.10, LDSC v1.0.1, EWCE, FUMA (web) |
 | [`05_LDSC_genetic_correlation/`](05_LDSC_genetic_correlation/) | Genome-wide genetic correlations | LDSC v1.0.1 |
 | [`06_MiXeR/`](06_MiXeR/) | Polygenic overlap analysis | MiXeR v1.3 |
@@ -28,7 +28,12 @@ in the order the analyses appear in the Methods section.
 | [`Figure/`](Figure/) | Figures (Manhattan, regional, heatmaps, forest plots, etc.) | R (qqman, locuszoomr, pheatmap, CMplot, meta, …) |
 
 Retained run logs (which record the exact command flags) are kept in
-`logs/` subfolders where available.
+`logs/` subfolders where available (`03_GWAS_statistical_analysis/logs/`:
+the clumping runs).
+
+Note on PLINK versions: the dosage-based association analysis
+(`--glm`, PLINK v2.0) is the only step that used PLINK v2.0; all other
+PLINK analyses (QC, meta-analysis, clumping) used PLINK v1.9.
 
 ## Data
 

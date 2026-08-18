@@ -14,9 +14,8 @@ Corresponds to the Methods section **"Enrichment analysis"**.
 | File | Description |
 |---|---|
 | `EWCE_generateCTD.R` | Builds the cell-type expression specificity matrix with the EWCE package: average expression per cell type, normalised across cell types, top 10 % most specific genes per cell type kept; writes MAGMA set annotations (`top10.txt`) and LDSC bed files. NOTE: the script keeps cell types with ≥ 100 cells (`min_cells <- 100`), while the Methods text says cell types with fewer than 50 cells were omitted — check which threshold corresponds to your final analysis. |
-| `magma_gene_analysis.sh` | MAGMA gene-level analysis (flags from the retained logs). |
-| `magma_set_enrichment.sh` | MAGMA cell-type set enrichment against gene-level Z-scores (flags from the retained logs). |
-| `logs/` | Retained enrich run logs (one per cell-type class / developmental stage). |
+| `magma_gene_analysis.sh` | MAGMA gene-level analysis (flags as used in the study). |
+| `magma_set_enrichment.sh` | MAGMA cell-type set enrichment against gene-level Z-scores (one run per cell-type class / developmental stage). |
 
 ## LDSC/
 

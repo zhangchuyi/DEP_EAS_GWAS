@@ -2,7 +2,7 @@
 # =============================================================================
 # LDSC v1.0.1 SNP-based heritability estimation (liability scale)
 # =============================================================================
-# Command flags taken from the retained run logs (see logs/). EAS LD scores
+# Command flags as used in the study. EAS LD scores
 # (HapMap3 SNPs) from https://data.broadinstitute.org/alkesgroup/LDSCORE/.
 #
 # Preprocessing (shared with genetic correlation analysis, see
@@ -15,7 +15,7 @@
 # (assumed lifetime DEP prevalence) and --samp-prev = sample prevalence.
 # =============================================================================
 
-REF_LDSC=/path/to/ldsc/reference/eas_ldscores     # EAS LD scores (original: /home/lilab/zhangchuyi/1.GWAS/ref/ldsc/1000G_Phase3_LDSC/eas_ldscores/)
+REF_LDSC={path_to_ldsc_ref}/eas_ldscores    # EAS LD scores (HapMap3 SNPs)
 SUMSTATS=sorted_meta_mdd2023diverse_EAS_Neff-ourHan_l-r_dosage_allCovar-TPMI_mdd.Diff-Model.I85.R2_08.LDSC.sumstats.gz
 SAMP_PREV=0.05
 

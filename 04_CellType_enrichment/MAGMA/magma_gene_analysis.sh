@@ -2,7 +2,7 @@
 # =============================================================================
 # MAGMA v1.10 — gene-level association analysis
 # =============================================================================
-# Command flags taken verbatim from the retained logs (see logs/).
+# Command flags as used in the study.
 # LD reference: 1000 Genomes EAS panel (504 individuals).
 # Gene boundaries extended 35 kb upstream / 10 kb downstream
 # (MAGMAdefault.genes.annot).

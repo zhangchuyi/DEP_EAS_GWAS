@@ -5,7 +5,7 @@ Corresponds to the Methods sections **"Quality control for GWAS data"** and
 
 | File | Description |
 |---|---|
-| `plink_qc.sh` | Sample- and variant-level QC with PLINK v2.0 (sex check, missingness, heterozygosity, IBD, PCA outliers, call rate, MAF, HWE, differential missingness). **Reconstructed from the Methods description** — the original run logs were not retained; edit paths/thresholds to match your data. |
+| `plink_qc.sh` | Sample- and variant-level QC with PLINK v1.9 (sex check, missingness, heterozygosity, IBD, PCA outliers, call rate, MAF, HWE, differential missingness). **Reconstructed from the Methods description** — the original run logs were not retained; edit paths/thresholds to match your data. |
 | `eigstrat_pca.sh` | EIGENSTRAT v7.1.2 PCA wrapper (`convertf` + `smartpca.perl`, 20 PCs, `numoutlieriter 0`). |
 | `params_NAME.txt` | `convertf` parameter file; copy to `params_<name>.txt` and replace `NAME` with your fileset stem. |
 
@@ -23,7 +23,7 @@ Corresponds to the Methods sections **"Quality control for GWAS data"** and
 
 ## Dependencies
 
-- PLINK 2.0 (https://www.cog-genomics.org/plink/2.0/)
+- PLINK 1.9 (https://www.cog-genomics.org/plink/)
 - EIGENSTRAT v7.1.2 (https://github.com/DReichLab/EIG)
 - SHAPEIT5 / Minimac4 for imputation (not included here)
 - `high-LD-regions.txt`: regions of extensive high LD from Anderson et al.

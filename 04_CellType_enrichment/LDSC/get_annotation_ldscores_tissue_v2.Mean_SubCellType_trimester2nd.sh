@@ -1,6 +1,6 @@
 # 20250728
 
-path_name="/me4012/zcy/1.GWAS/11.ALL_ASA_MDD_CTRL/FuDan_imputation/Final_Sample_forNHB_202509/cellType_LDSC"
+path_name="{path_to_work_dir}/cellType_LDSC"
 all_snps="/home/lilab/software/ldsc/reference/1000G_Phase3_EAS_baselineLD_v2.2/all_EAS.snps"
 all_annotations="/home/lilab/software/ldsc/reference/1000G_Phase3_EAS_baselineLD_v2.2"
 plink_file="/home/lilab/software/ldsc/reference/1000G_Phase3_EAS_plinkfiles"
