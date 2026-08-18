@@ -1,0 +1,18 @@
+# R
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Local/analysis outputs
+*.bed
+*.bim
+*.fam
+*.vcf.gz
+*.pgen
+*.pvar
+*.psam
+*.sumstats.gz
+*.meta
+output/
+results/

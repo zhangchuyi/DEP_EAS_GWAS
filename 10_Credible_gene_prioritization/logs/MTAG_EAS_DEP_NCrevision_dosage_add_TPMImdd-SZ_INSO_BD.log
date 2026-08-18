@@ -1,0 +1,37 @@
+Welcome to MAGMA v1.10 (linux)
+Using flags:
+	--bfile /home/lilab/reference/1000G_MAGMA_ref/g1000_eas
+	--pval MTAG/dosage_version/add_TPMImdd/MTAG_EAS_DEP_NCrevision_dosage_add_TPMImdd-SZ_INSO_BD_trait_1.txt use=SNP,P ncol=N
+	--gene-annot /home/lilab/software/H-MAGMA/Input_Files/MAGMAdefault.genes.annot
+	--out MAGMA_PoPS/MTAG_EAS_DEP_NCrevision_dosage_add_TPMImdd-SZ_INSO_BD
+
+Start time is 10:34:53, Friday 17 Jul 2026
+
+Loading PLINK-format data...
+Reading file /home/lilab/reference/1000G_MAGMA_ref/g1000_eas.fam... 504 individuals read
+Reading file /home/lilab/reference/1000G_MAGMA_ref/g1000_eas.bim... 22263023 SNPs read
+Preparing file /home/lilab/reference/1000G_MAGMA_ref/g1000_eas.bed... 
+
+Reading SNP synonyms from file /home/lilab/reference/1000G_MAGMA_ref/g1000_eas.synonyms (auto-detected)
+	read 5575859 mapped synonyms from file, mapping to 3594051 SNPs in the data
+	WARNING: detected 119 synonymous SNP pairs in the data
+	         skipped all synonym entries involved, synonymous SNPs are kept in analysis
+	         writing list of detected synonyms in data to supplementary log file
+Reading SNP p-values from file MTAG/dosage_version/add_TPMImdd/MTAG_EAS_DEP_NCrevision_dosage_add_TPMImdd-SZ_INSO_BD_trait_1.txt... 
+	detected 12 variables in file
+	using variable: SNP (SNP id)
+	using variable: P (p-value)
+	using variable: N (sample size; discarding SNPs with N < 50)
+	read 4068454 lines from file, containing valid SNP p-values for 4059072 SNPs in data (99.77% of lines, 18.23% of SNPs in data)
+Loading gene annotation from file /home/lilab/software/H-MAGMA/Input_Files/MAGMAdefault.genes.annot... 
+	56737 gene definitions read from file
+	found 53007 genes containing valid SNPs in genotype data
+
+
+Starting gene analysis... 
+	using model: SNPwise-mean
+	writing gene analysis results to file MAGMA_PoPS/MTAG_EAS_DEP_NCrevision_dosage_add_TPMImdd-SZ_INSO_BD.genes.out
+	writing intermediate output to file MAGMA_PoPS/MTAG_EAS_DEP_NCrevision_dosage_add_TPMImdd-SZ_INSO_BD.genes.raw
+
+
+End time is 11:11:41, Friday 17 Jul 2026 (elapsed: 00:36:48)

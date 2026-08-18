@@ -1,0 +1,34 @@
+Welcome to MAGMA v1.10 (linux)
+Using flags:
+	--gene-results sorted_meta_mdd2023diverse_EAS_Neff-ourHan_l-r_dosage_allCovar-TPMI_mdd.Diff-Model.I85.MAGMAdefault.entrezID.genes.raw
+	--set-annot /home/lilab/zhangchu1/1.GWAS/MAGMA_Celltype_Enrich/2023Science_human_prenatal-postnatal_cortical_development/Mean_SubCellType_years0_1/MAGMA/top10.txt
+	--out DEP_EAS_NCrevison_dosage_allCovar_I85-cortical_development_Mean_SubCellType_years0_1.enrich
+
+Start time is 16:54:20, Monday 27 Jul 2026
+
+Reading file sorted_meta_mdd2023diverse_EAS_Neff-ourHan_l-r_dosage_allCovar-TPMI_mdd.Diff-Model.I85.MAGMAdefault.entrezID.genes.raw... 
+	55230 genes read from file
+Loading gene-set annotation...
+Reading file /home/lilab/zhangchu1/1.GWAS/MAGMA_Celltype_Enrich/2023Science_human_prenatal-postnatal_cortical_development/Mean_SubCellType_years0_1/MAGMA/top10.txt... 
+	28 gene-set definitions read from file
+	found 28 gene sets containing genes defined in genotype data (containing a total of 12870 unique genes)
+Preparing variables for analysis...
+	truncating Z-scores 3 points below zero or 6 standard deviations above the mean
+	truncating covariate values more than 5 standard deviations from the mean
+	total variables available for analysis: 28 gene sets
+
+Parsing model specifications...
+Inverting gene-gene correlation matrix...
+Performing regression analysis...
+	testing direction: one-sided, positive (sets), two-sided (covar)
+	conditioning on internal variables:
+		gene size, log(gene size)
+		gene density, log(gene density)
+		sample size, log(sample size)
+		inverse mac, log(inverse mac)
+	analysing individual variables
+
+	analysing single-variable models (number of models: 28)
+	writing results to file DEP_EAS_NCrevison_dosage_allCovar_I85-cortical_development_Mean_SubCellType_years0_1.enrich.gsa.out
+
+End time is 17:02:14, Monday 27 Jul 2026 (elapsed: 00:07:54)

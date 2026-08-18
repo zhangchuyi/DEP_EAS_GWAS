@@ -1,0 +1,34 @@
+*********************************************************************
+* LD Score Regression (LDSC)
+* Version 1.0.1
+* (C) 2014-2019 Brendan Bulik-Sullivan and Hilary Finucane
+* Broad Institute of MIT and Harvard / MIT Department of Mathematics
+* GNU General Public License v3
+*********************************************************************
+Call: 
+./ldsc.py \
+--h2 sorted_meta_mdd2023diverse_EAS_Neff-ourHan_l-r_dosage_allCovar-TPMI_mdd.Diff-Model.I85.R2_08.LDSC.sumstats.gz \
+--ref-ld-chr /home/lilab/zhangchuyi/1.GWAS/ref/ldsc/1000G_Phase3_LDSC/eas_ldscores/ \
+--out sorted_meta_mdd2023diverse_EAS_Neff-ourHan_l-r_dosage_allCovar-TPMI_mdd.Diff-Model.I85.R2_08.prev0.2.h2 \
+--pop-prev 0.2 \
+--samp-prev 0.05 \
+--w-ld-chr /home/lilab/zhangchuyi/1.GWAS/ref/ldsc/1000G_Phase3_LDSC/eas_ldscores/ 
+
+Beginning analysis at Tue Aug 18 11:39:55 2026
+Reading summary statistics from sorted_meta_mdd2023diverse_EAS_Neff-ourHan_l-r_dosage_allCovar-TPMI_mdd.Diff-Model.I85.R2_08.LDSC.sumstats.gz ...
+Read summary statistics for 4651064 SNPs.
+Reading reference panel LD Score from /home/lilab/zhangchuyi/1.GWAS/ref/ldsc/1000G_Phase3_LDSC/eas_ldscores/[1-22] ... (ldscore_fromlist)
+Read reference panel LD Scores for 1208050 SNPs.
+Removing partitioned LD Scores with zero variance.
+Reading regression weight LD Score from /home/lilab/zhangchuyi/1.GWAS/ref/ldsc/1000G_Phase3_LDSC/eas_ldscores/[1-22] ... (ldscore_fromlist)
+Read regression weight LD Scores for 1208050 SNPs.
+After merging with reference panel LD, 915055 SNPs remain.
+After merging with regression SNP LD, 915055 SNPs remain.
+Using two-step estimator with cutoff at 30.
+Total Liability scale h2: 0.0425 (0.0068)
+Lambda GC: 1.0496
+Mean Chi^2: 1.0471
+Intercept: 0.9756 (0.0075)
+Ratio < 0 (usually indicates GC correction).
+Analysis finished at Tue Aug 18 11:40:23 2026
+Total time elapsed: 27.98s
