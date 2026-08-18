@@ -15,8 +15,8 @@
 # analysis (see 03_GWAS_statistical_analysis/run_glm_per_chr.sh).
 # =============================================================================
 
-RAW=data.raw          # PLINK binary fileset of the raw genotyping data
-OUT=qcd
+RAW="Han_Chinese_MDD"         # PLINK binary fileset of the raw genotyping data
+OUT="Han_Chinese_MDD.QC"
 
 # ---------- Individual-level QC ---------------------------------------------
 

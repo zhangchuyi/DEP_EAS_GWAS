@@ -14,7 +14,7 @@ in the order the analyses appear in the Methods section.
 
 | Folder | Methods section | Main software |
 |---|---|---|
-| [`01_QC_GWAS_data/`](01_QC_GWAS_data/) | Quality control for GWAS data; Genotype imputation | PLINK v1.9, EIGENSTRAT v7.1.2 (SHAPEIT5 / Minimac4 not retained) |
+| [`01_QC_GWAS_data/`](01_QC_GWAS_data/) | Quality control for GWAS data; Genotype imputation | PLINK v1.9, EIGENSTRAT v7.1.2, SHAPEIT5, Minimac4 (imputation script reconstructed) |
 | [`02_LDSC_heritability/`](02_LDSC_heritability/) | LD score regression heritability estimation | LDSC v1.0.1 |
 | [`03_GWAS_statistical_analysis/`](03_GWAS_statistical_analysis/) | Statistical analysis in GWAS samples | PLINK v2.0 (dosage-based association), PLINK v1.9 (meta-analysis, clumping), locuszoomr v0.3.8 |
 | [`04_CellType_enrichment/`](04_CellType_enrichment/) | Enrichment analysis (tissue & cell type) | MAGMA v1.10, LDSC v1.0.1, EWCE, FUMA (web) |
@@ -47,7 +47,8 @@ under controlled access (**[insert access route]**).
 
 - Scripts with header comment **`RECONSTRUCTED`** were rewritten from the
   Methods description because the original files/logs were not retained:
-  the PLINK QC pipeline (`01_QC_GWAS_data/plink_qc.sh`), the meta-analysis
+  the PLINK QC pipeline (`01_QC_GWAS_data/plink_qc.sh`), the imputation
+  pipeline (`01_QC_GWAS_data/imputation.sh`), the meta-analysis
   invocation (`03_GWAS_statistical_analysis/meta_analysis.sh`), the PolyFun
   prior pipeline (`08_Fine_mapping/run_polyfun_priors.sh`), the MTAG
   10-combination wrapper (`07_MTAG/run_mtag_all_combos.sh`), the SMR scripts
