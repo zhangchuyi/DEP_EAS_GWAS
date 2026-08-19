@@ -1,29 +1,13 @@
-#!/usr/bin/env bash
 # =============================================================================
-# PRS prediction and association in the Han Chinese target samples
+# PRS association in the Han Chinese target samples
 # =============================================================================
-# As used in the study. PRS are computed for the Han Chinese
-# target samples (5,221 cases / 7,317 controls) with PLINK v1.9 --score using
-# the PRS-CS posterior effect estimates; case-control status is regressed on
-# the Z-score-standardised PRS by logistic regression (R glm, family =
-# binomial(logit)) with the same covariates as in the MDD-Han GWAS. R2 is
-# converted to Nagelkerke pseudo-R2 (fmsb) and then to liability-scaled
-# Nagelkerke pseudo-R2, assuming DEP prevalence of 5-20%.
+# Case-control status is regressed on the Z-score-standardised PRS by logistic 
+# regression (R glm, family = binomial(logit)) with the same covariates as in
+# the MDD-Han GWAS. R2 is converted to Nagelkerke pseudo-R2 (fmsb) and then to 
+# liability-scaled Nagelkerke pseudo-R2, assuming DEP prevalence of 5-20%.
 # =============================================================================
-
-## Generate PRS
-
-targetGWAS_path="/path/to/file"
-
-plink \
-	--bfile ${targetGWAS_path}/Han_Chinese_MDD.QC.R2_08 \
-	--out meta_DEP-Meng_TPMI-predict-Han_Chinese_DEP.PRS-CS.score \
-	--score Merge_meta_DEP-Meng_TPMI-predict-Han_Chinese_DEP.PRS-CS_pst_eff_a1_b0.5_phiauto.txt 2 4 6
-# NOTE: the .profile output of plink --score is named after --out; rename it
-# to ${name}.profile (see the R block below) before running the association.
 
 ## PRS association
-R
 library(boot)
 library(fmsb)
 library(dplyr)
