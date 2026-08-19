@@ -11,7 +11,7 @@
 #   - remove ambiguous A/T and G/C SNPs
 #   - munge_sumstats.py (HapMap3 SNPs only)
 #
-# The analysis was run with --pop-prev 0.08 / 0.1 / 0.15 / 0.2
+# The analysis was run with --pop-prev 0.05 / 0.1 / 0.15 / 0.2
 # (assumed lifetime DEP prevalence) and --samp-prev = sample prevalence.
 # =============================================================================
 
@@ -19,7 +19,7 @@ REF_LDSC={path_to_ldsc_ref}/eas_ldscores    # EAS LD scores (HapMap3 SNPs)
 SUMSTATS=sorted_meta_mdd2023diverse_EAS_Neff-ourHan_l-r_dosage_allCovar-TPMI_mdd.Diff-Model.I85.R2_08.LDSC.sumstats.gz
 SAMP_PREV=0.05
 
-for POP_PREV in 0.08 0.1 0.15 0.2; do
+for POP_PREV in 0.05 0.1 0.15 0.2; do
     ldsc.py \
         --h2 ${SUMSTATS} \
         --ref-ld-chr ${REF_LDSC}/ \
