@@ -2,9 +2,6 @@
 
 Analysis code for the manuscript:
 
-> **[Insert manuscript title here]**  
-> *(add authors, journal, DOI when available)*
-
 This repository contains the scripts used for the genome-wide association
 study (GWAS) of depression (DEP) in East Asian (EAS) populations and all
 downstream analyses described in the Online Methods. The folders are numbered
@@ -14,34 +11,18 @@ in the order the analyses appear in the Methods section.
 
 | Folder | Methods section | Main software |
 |---|---|---|
-| [`01_QC_GWAS_data/`](01_QC_GWAS_data/) | Quality control for GWAS data; Genotype imputation | PLINK v1.9, EIGENSTRAT v7.1.2, SHAPEIT5, Minimac4 (imputation script reconstructed) |
+| [`01_QC_GWAS_data/`](01_QC_GWAS_data/) | Quality control for GWAS data; Genotype imputation | PLINK v1.9, EIGENSTRAT v7.1.2, SHAPEIT5, Minimac4 |
 | [`02_LDSC_heritability/`](02_LDSC_heritability/) | LD score regression heritability estimation | LDSC v1.0.1 |
 | [`03_GWAS_statistical_analysis/`](03_GWAS_statistical_analysis/) | Statistical analysis in GWAS samples | PLINK v2.0 (dosage-based association), PLINK v1.9 (meta-analysis, clumping), locuszoomr v0.3.8 |
-| [`04_CellType_enrichment/`](04_CellType_enrichment/) | Enrichment analysis (tissue & cell type) | MAGMA v1.10, LDSC v1.0.1, EWCE, FUMA (web) |
+| [`04_CellType_enrichment/`](04_CellType_enrichment/) | Enrichment analysis | MAGMA v1.10, LDSC v1.0.1, EWCE |
 | [`05_LDSC_genetic_correlation/`](05_LDSC_genetic_correlation/) | Genome-wide genetic correlations | LDSC v1.0.1 |
 | [`06_MiXeR/`](06_MiXeR/) | Polygenic overlap analysis | MiXeR v1.3 |
 | [`07_MTAG/`](07_MTAG/) | Multi-Trait Analysis of GWAS | MTAG |
-| [`08_Fine_mapping/`](08_Fine_mapping/) | Fine-mapping analysis | PolyFun + SuSiE, FUMA v1.6.4 SNP2GENE (web) |
+| [`08_Fine_mapping/`](08_Fine_mapping/) | Fine-mapping analysis | PolyFun + SuSiE |
 | [`09_SMR/`](09_SMR/) | SMR analysis | SMR |
 | [`10_Credible_gene_prioritization/`](10_Credible_gene_prioritization/) | Credible gene prioritization | MAGMA v1.10, PoPS |
-| [`11_Drug_target/`](11_Drug_target/) | Drug target analyses | DGIdb v5.0 API, Open Targets |
+| [`11_Drug_target/`](11_Drug_target/) | Drug target analyses | Open Targets |
 | [`Figure/`](Figure/) | Figures (Manhattan, regional, heatmaps, forest plots, etc.) | R (qqman, locuszoomr, pheatmap, CMplot, meta, …) |
-
-Retained run logs (which record the exact command flags) are kept in
-`logs/` subfolders where available (`03_GWAS_statistical_analysis/logs/`:
-the clumping runs).
-
-Note on PLINK versions: the dosage-based association analysis
-(`--glm`, PLINK v2.0) is the only step that used PLINK v2.0; all other
-PLINK analyses (QC, meta-analysis, clumping) used PLINK v1.9.
-
-## Data
-
-GWAS summary statistics: **[insert download location / DOI — e.g. Zenodo,
-GWAS Catalog accession]**.
-
-Raw genotype data contain individual-level information and are available
-under controlled access (**[insert access route]**).
 
 ## Notes on provenance
 
@@ -58,8 +39,6 @@ under controlled access (**[insert access route]**).
   retained script (`11_Drug_target/`).
 - Absolute file paths in the scripts reflect the original computing
   environment (local HPC clusters); adjust them to your setup.
-- Credentials/API tokens that appeared in the original working copies have
-  been removed before publication.
 
 ## License
 
