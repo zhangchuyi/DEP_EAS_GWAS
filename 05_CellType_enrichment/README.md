@@ -1,4 +1,4 @@
-# 04 — Enrichment analysis (tissue & cell-type)
+# 05 — Enrichment analysis (tissue & cell-type)
 
 Corresponds to the Methods section **"Enrichment analysis"**.
 

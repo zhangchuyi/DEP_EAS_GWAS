@@ -1,4 +1,4 @@
-# 12 — Polygenic risk score (PRS) analysis
+# 04 — Polygenic risk score (PRS) analysis
 
 | File | Description |
 |---|---|

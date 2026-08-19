@@ -1,4 +1,4 @@
-# 08 — Fine-mapping analysis (PolyFun + SuSiE)
+# 09 — Fine-mapping analysis (PolyFun + SuSiE)
 
 Corresponds to the Methods section **"Fine-mapping analysis"**.
 

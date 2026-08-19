@@ -6,7 +6,7 @@
 # (HapMap3 SNPs) from https://data.broadinstitute.org/alkesgroup/LDSCORE/.
 #
 # Preprocessing (shared with genetic correlation analysis, see
-# ../05_LDSC_genetic_correlation/LDSC_summary_QC.sh):
+# ../06_LDSC_genetic_correlation/LDSC_summary_QC.sh):
 #   - remove MHC region (hg19, chr6:25-35 Mb)
 #   - remove ambiguous A/T and G/C SNPs
 #   - munge_sumstats.py (HapMap3 SNPs only)

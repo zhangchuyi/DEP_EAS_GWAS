@@ -1,4 +1,4 @@
-# 09 — SMR analysis
+# 10 — SMR analysis
 
 Corresponds to the Methods section **"SMR analysis"**.
 

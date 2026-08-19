@@ -14,15 +14,15 @@ in the order the analyses appear in the Methods section.
 | [`01_QC_GWAS_data/`](01_QC_GWAS_data/) | Quality control for GWAS data; Genotype imputation | PLINK v1.9, EIGENSTRAT v7.1.2, SHAPEIT5, Minimac4 |
 | [`02_LDSC_heritability/`](02_LDSC_heritability/) | LD score regression heritability estimation | LDSC v1.0.1 |
 | [`03_GWAS_statistical_analysis/`](03_GWAS_statistical_analysis/) | Statistical analysis in GWAS samples | PLINK v2.0 (dosage-based association), PLINK v1.9 (meta-analysis, clumping), locuszoomr v0.3.8 |
-| [`04_CellType_enrichment/`](04_CellType_enrichment/) | Enrichment analysis | MAGMA v1.10, LDSC v1.0.1, EWCE |
-| [`05_LDSC_genetic_correlation/`](05_LDSC_genetic_correlation/) | Genome-wide genetic correlations | LDSC v1.0.1 |
-| [`06_MiXeR/`](06_MiXeR/) | Polygenic overlap analysis | MiXeR v1.3 |
-| [`07_MTAG/`](07_MTAG/) | Multi-Trait Analysis of GWAS | MTAG |
-| [`08_Fine_mapping/`](08_Fine_mapping/) | Fine-mapping analysis | PolyFun + SuSiE |
-| [`09_SMR/`](09_SMR/) | SMR analysis | SMR |
-| [`10_Credible_gene_prioritization/`](10_Credible_gene_prioritization/) | Credible gene prioritization | MAGMA v1.10, PoPS |
-| [`11_Drug_target/`](11_Drug_target/) | Drug target analyses | DGIdb v5.0 API, Open Targets |
-| [`12_PRS/`](12_PRS/) | Polygenic risk score (PRS) analysis | PRS-CS, PLINK v1.9, R (fmsb, boot) |
+| [`04_PRS/`](04_PRS/) | Polygenic risk score (PRS) analysis | PRS-CS, PLINK v1.9, R (fmsb, boot) |
+| [`05_CellType_enrichment/`](05_CellType_enrichment/) | Enrichment analysis | MAGMA v1.10, LDSC v1.0.1, EWCE |
+| [`06_LDSC_genetic_correlation/`](06_LDSC_genetic_correlation/) | Genome-wide genetic correlations | LDSC v1.0.1 |
+| [`07_MiXeR/`](07_MiXeR/) | Polygenic overlap analysis | MiXeR v1.3 |
+| [`08_MTAG/`](08_MTAG/) | Multi-Trait Analysis of GWAS | MTAG |
+| [`09_Fine_mapping/`](09_Fine_mapping/) | Fine-mapping analysis | PolyFun + SuSiE |
+| [`10_SMR/`](10_SMR/) | SMR analysis | SMR |
+| [`11_Credible_gene_prioritization/`](11_Credible_gene_prioritization/) | Credible gene prioritization | MAGMA v1.10, PoPS |
+| [`12_Drug_target/`](12_Drug_target/) | Drug target analyses | DGIdb v5.0 API, Open Targets |
 | [`Figure/`](Figure/) | Figures (Manhattan, regional, heatmaps, forest plots, etc.) | R (qqman, locuszoomr, pheatmap, CMplot, meta, …) |
 
 ## Notes on provenance
@@ -32,12 +32,12 @@ in the order the analyses appear in the Methods section.
   the PLINK QC pipeline (`01_QC_GWAS_data/plink_qc.sh`), the imputation
   pipeline (`01_QC_GWAS_data/imputation.sh`), the meta-analysis
   invocation (`03_GWAS_statistical_analysis/meta_analysis.sh`), the PolyFun
-  prior pipeline (`08_Fine_mapping/run_polyfun_priors.sh`), the MTAG
-  10-combination wrapper (`07_MTAG/run_mtag_all_combos.sh`) and the SMR
-  scripts (`09_SMR/`). The commands
+  prior pipeline (`09_Fine_mapping/run_polyfun_priors.sh`), the MTAG
+  10-combination wrapper (`08_MTAG/run_mtag_all_combos.sh`) and the SMR
+  scripts (`10_SMR/`). The commands
   marked `taken verbatim from the retained logs` reproduce the exact flags
   used in the study. The DGIdb drug-gene interaction queries have no
-  retained script (`11_Drug_target/`).
+  retained script (`12_Drug_target/`).
 - Absolute file paths in the scripts reflect the original computing
   environment (local HPC clusters); adjust them to your setup.
 

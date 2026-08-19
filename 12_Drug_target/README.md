@@ -1,4 +1,4 @@
-# 11 — Drug target analyses
+# 12 — Drug target analyses
 
 Corresponds to the Methods section **"Drug target analyses"**.
 
