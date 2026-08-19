@@ -6,3 +6,7 @@
 | `PRS_prediction.sh` | Computes PRS for the Han Chinese target samples (5,221 cases / 7,317 controls) with PLINK v1.9 `--score` using the PRS-CS posterior effect estimates, then regresses case-control status on the Z-score-standardised PRS by logistic regression in R (`glm()`, `family = binomial(logit)`), including the same covariates as in the MDD-Han GWAS. The variance explained (R²) is converted to Nagelkerke pseudo-R² with the `fmsb` package and then to liability-scaled Nagelkerke pseudo-R² assuming DEP prevalence of 5 %-20 %. |
 
 Dependencies: PRS-CS (Python), PLINK v1.9, R packages `boot`, `fmsb`, `dplyr`.
+
+> Note: the second half of `PRS_prediction.sh` (from the bare `R` line onward)
+> is interactive R code as originally run — execute it inside an R session,
+> not bash.
