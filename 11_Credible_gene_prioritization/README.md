@@ -1,8 +1,7 @@
 # 11 — Additional approaches in credible gene prioritization
 
 Corresponds to the Methods section **"Additional approaches in credible gene
-prioritization"**. Two complementary methods, one unit score each; genes with
-three or more scores (with SMR and fine-mapping) were designated credible.
+prioritization"**. 
 
 | File | Description |
 |---|---|
