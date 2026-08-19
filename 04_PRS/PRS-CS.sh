@@ -24,3 +24,14 @@ for i in $(seq 1 22); do
         --chr ${i} \
         --out_dir=${OUT_DIR}
 done
+
+## Generate PRS
+
+targetGWAS_path="/path/to/file"
+
+plink \
+	--bfile ${targetGWAS_path}/Han_Chinese_MDD.QC.R2_08 \
+	--out meta_DEP-Meng_TPMI-predict-Han_Chinese_DEP.PRS-CS.score \
+	--score Merge_meta_DEP-Meng_TPMI-predict-Han_Chinese_DEP.PRS-CS_pst_eff_a1_b0.5_phiauto.txt 2 4 6
+# NOTE: the .profile output of plink --score is named after --out; rename it
+# to ${name}.profile (see the R block below) before running the association.
