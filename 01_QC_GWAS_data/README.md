@@ -5,8 +5,8 @@ Corresponds to the Methods sections **"Quality control for GWAS data"** and
 
 | File | Description |
 |---|---|
-| `plink_qc.sh` | Sample- and variant-level QC with PLINK v1.9 (sex check, missingness, heterozygosity, IBD, PCA outliers, call rate, MAF, HWE, differential missingness). **Reconstructed from the Methods description** — the original run logs were not retained; edit paths/thresholds to match your data. |
-| `imputation.sh` | Genotype imputation: SHAPEIT5 prephasing + Minimac4 with the PGGHan2 (N = 20,823) Han Chinese reference panel, then post-imputation filtering (R² > 0.8, MAF > 1 %, call rate > 95 %, HWE P > 1×10⁻⁵ in controls). **Reconstructed from the Methods description**. |
+| `plink_qc.sh` | Sample- and variant-level QC with PLINK v1.9 (sex check, missingness, heterozygosity, IBD, PCA outliers, call rate, MAF, HWE, differential missingness). |
+| `imputation.sh` | Genotype imputation: SHAPEIT5 prephasing + Minimac4 with the PGGHan2 (N = 20,823) Han Chinese reference panel, then post-imputation filtering (R² > 0.8, MAF > 1 %, call rate > 95 %, HWE P > 1×10⁻⁵ in controls). |
 | `eigstrat_pca.sh` | EIGENSTRAT v7.1.2 PCA wrapper (`convertf` + `smartpca.perl`, 20 PCs, `numoutlieriter 0`). |
 | `params_NAME.txt` | `convertf` parameter file; copy to `params_<name>.txt` and replace `NAME` with your fileset stem. |
 
