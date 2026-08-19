@@ -16,9 +16,3 @@ with two analyses:
 - EAS LD reference panel; HEIDI test to distinguish true cis-regulatory
   effects from linkage
 - dual thresholds: FDR_SMR < 0.05 and P_HEIDI > 0.01
-
-> ⚠️ Both scripts in this folder were **reconstructed from the Methods
-> description** — the original SMR run commands and eQTL processing code were
-> not retained. Please verify the exact options against your SMR version and
-> adjust `--diff-freq-prop` / `--peqtl-smr` if your analysis used different
-> settings.
