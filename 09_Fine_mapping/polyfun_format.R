@@ -2,7 +2,7 @@
 
 library(dplyr)
 library(data.table)
-ref = fread("Merge_FuDan_6021MDD_7318ctrl.indqc.snpqc.hg38.R2_03.snpqc.rmUnmap.rm-misCHR.rmDup.hg19.bim")
+ref = fread("Han_Chinese_MDD.QC.R2_08.bim")
 ref = ref[,c(2,5,6)]
 names(ref)[1] = "SNP"
 
@@ -32,7 +32,7 @@ library(data.table)
 file = name$V1
 for(name in file){
 a = fread(paste0(name,".Polyfun.snps_with_var"),header = T)
-a = a[,c("CHR","BP","SNPVAR")] ## Polyfun.snps_with_var中的SNP ID和Trans meta中的不一致，所以要用CHR & BP匹配
+a = a[,c("CHR","BP","SNPVAR")] 
 b = fread(paste0(name,".allele-match-LD.zscore.N.txt"),header = T)
 m = left_join(a,b)
 m = m[!is.na(m$Z),]
