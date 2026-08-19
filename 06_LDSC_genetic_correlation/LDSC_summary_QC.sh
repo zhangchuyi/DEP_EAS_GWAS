@@ -1,4 +1,3 @@
-# name.txt: list of trait file stems (one per line), e.g. "mdd2023diverse_EAS_Neff-ourHan_l-r_dosage_allCovar-TPMI_mdd"
 # Each input is sorted_<name>.Diff-Model.I${i}.meta with columns CHR BP SNP A1 A2 ... (see 03_GWAS_statistical_analysis)
 for name in `cat name.txt`
 do
