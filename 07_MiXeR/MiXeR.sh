@@ -11,9 +11,6 @@
 
 Sumstats=/home/lilab/software/mixer-master/python_convert-master/sumstats.py
 
-name="sorted_EAS_mdd2023diverse_EAS-meta-Han_Chinese_5221mdd_7318ctrl.Diff-Model.I80"
-name="sorted_EAS_mdd2023diverse_EAS-meta-Han_Chinese_5221mdd_7318ctrl.rmI70_75.Diff-Model.I70"
-name="sorted_EAS_mdd2023diverse_EAS-meta-Han_Chinese_5221mdd_7318ctrl.Diff-Model.I65"
 $Sumstats csv --sumstats ${name}.meta --out ${name}.csv --force --auto --head 5 --bp BP --or OR --pval P --n Neff
 $Sumstats zscore --sumstats ${name}.csv | $Sumstats qc --exclude-ranges 6:26000000-34000000 --out ${name}_qc.csv --force
 gzip ${name}_qc.csv
@@ -22,8 +19,6 @@ gzip ${name}_qc.csv
 
 mkdir MiXeR_fit1 MiXeR_fit2
 
-name="Red_blood_cell+GCST90278667"
-name="Hematocrit+GCST90278662"
 for i in {1..20}
 do
         python3 /home/lilab/software/mixer-master/precimed/mixer.py fit1 \
@@ -47,16 +42,10 @@ python3 /home/lilab/software/mixer-master/precimed/mixer_figures.py one --json .
 
 #### 3. MiXeR Bivariate (cross-trait) analysis
 
-name1="sorted_meta_allASA_imputed_JAMA-ASA-NewSample_rmHX_GSA-all.Diff-Model.I50"
-name2="Red_blood_cell+GCST90278667"
-sname1="Han_Chinese_BD"
-sname2="Red_Blood_Cell_counts"
-refpath="/home/lilab/software/mixer-master/1000G_EAS_Phase3_plink"
-
-name1="sorted_meta_allASA_imputed_JAMA-ASA-NewSample_rmHX_GSA-all.Diff-Model.I50"
-name2="Suicide_daner_isgc_mvp_ASN_062821"
-sname1="Han_Chinese_BD"
-sname2="Suicide_ASN"
+name1=""
+name2=""
+sname1=""
+sname2=""
 refpath="/home/lilab/software/mixer-master/1000G_EAS_Phase3_plink"
 
 for i in $(seq 1 20)
