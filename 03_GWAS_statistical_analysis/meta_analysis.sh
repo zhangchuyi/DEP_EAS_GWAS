@@ -11,7 +11,7 @@
 # below reproduce the inverse-variance-weighted meta-analyses of the three
 # contributing cohorts (PLINK v1.9 --meta-analysis; input format: SNP, A1,
 # A2, OR/BETA, SE or P, N/Neff). The fixed-/random-effect selection on I^2
-# is implemented in meta_I75.sh.
+# is implemented in meta_I85.sh.
 # =============================================================================
 
 MDD_HAN=mdd_han_5221Ca_7317Con.Neff.tsv
