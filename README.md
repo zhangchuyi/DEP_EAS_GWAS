@@ -22,6 +22,7 @@ in the order the analyses appear in the Methods section.
 | [`09_SMR/`](09_SMR/) | SMR analysis | SMR |
 | [`10_Credible_gene_prioritization/`](10_Credible_gene_prioritization/) | Credible gene prioritization | MAGMA v1.10, PoPS |
 | [`11_Drug_target/`](11_Drug_target/) | Drug target analyses | DGIdb v5.0 API, Open Targets |
+| [`12_PRS/`](12_PRS/) | Polygenic risk score (PRS) analysis | PRS-CS, PLINK v1.9, R (fmsb, boot) |
 | [`Figure/`](Figure/) | Figures (Manhattan, regional, heatmaps, forest plots, etc.) | R (qqman, locuszoomr, pheatmap, CMplot, meta, …) |
 
 ## Notes on provenance
