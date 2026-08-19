@@ -2,8 +2,6 @@
 
 Corresponds to the Methods section **"Enrichment analysis"**.
 
-- Tissue-level enrichment was run with **FUMA** (default settings, GTEx v8
-  expression data) via the web platform — no local code.
 - Cell-type enrichment used single-nucleus RNA-seq data of human cortical
   development (709,372 nuclei, 169 samples; https://pre-postnatalcortex.cells.ucsc.edu,
   2023 Science), analysed with **MAGMA v1.10** and **LDSC v1.0.1** partitioned
