@@ -2,9 +2,6 @@
 
 Analysis code for the manuscript:
 
-> **[Insert manuscript title here]**  
-> *(add authors, journal, DOI when available)*
-
 This repository contains the scripts used for the genome-wide association
 study (GWAS) of depression (DEP) in East Asian (EAS) populations and all
 downstream analyses described in the Online Methods. The folders are numbered
