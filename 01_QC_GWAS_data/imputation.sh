@@ -17,8 +17,8 @@
 #         dosage VCFs (imputed.chrN.dose.vcf.gz) used by
 #         ../03_GWAS_statistical_analysis/run_glm_per_chr.sh
 #
-# Genome build: hg38 for imputation (PGGHan2 panel); if downstream analyses
-# require hg19, lift over afterwards (see final optional step).
+# Genome build: hg38 for imputation (PGGHan2 panel);
+#		liftOver to Hg19 for downstream analyses
 # =============================================================================
 
 STUDY=Han_Chinese_MDD.QC.final            # QC'd genotypes (PLINK binary fileset)
@@ -103,7 +103,5 @@ plink --merge-list ${OUTDIR}/mergelist.txt \
 # -----------------------------------------------------------------------------
 
 # =============================================================================
-# Optional — Liftover hg38 -> hg19 (if downstream analyses use hg19)
-#   Picard LiftoverVcf, or plink2 --set-all-var-ids + --update-chr + --update-map
-#   with the hg38ToHg19.over.chain file.
+#  Liftover hg38 -> hg19 with the hg38ToHg19.over.chain file.
 # =============================================================================

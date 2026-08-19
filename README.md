@@ -51,10 +51,11 @@ under controlled access (**[insert access route]**).
   pipeline (`01_QC_GWAS_data/imputation.sh`), the meta-analysis
   invocation (`03_GWAS_statistical_analysis/meta_analysis.sh`), the PolyFun
   prior pipeline (`08_Fine_mapping/run_polyfun_priors.sh`), the MTAG
-  10-combination wrapper (`07_MTAG/run_mtag_all_combos.sh`), the SMR scripts
-  (`09_SMR/`) and the drug-target queries (`11_Drug_target/`). The commands
+  10-combination wrapper (`07_MTAG/run_mtag_all_combos.sh`) and the SMR
+  scripts (`09_SMR/`). The commands
   marked `taken verbatim from the retained logs` reproduce the exact flags
-  used in the study.
+  used in the study. The DGIdb drug-gene interaction queries have no
+  retained script (`11_Drug_target/`).
 - Absolute file paths in the scripts reflect the original computing
   environment (local HPC clusters); adjust them to your setup.
 - Credentials/API tokens that appeared in the original working copies have
