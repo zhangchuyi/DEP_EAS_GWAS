@@ -1,4 +1,4 @@
-# 2024-03-13
+# 2025-03-13
 # MiXeR v1.3 polygenic overlap analysis (https://github.com/precimed/mixer)
 # NOTE: absolute paths reflect the original computing environment; adjust to your setup.
 # NOTE: the original file-transfer (rayfile) commands have been removed before publication
