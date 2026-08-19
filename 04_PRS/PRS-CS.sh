@@ -11,7 +11,7 @@
 
 PRSCS=/home/lilab/software/PRScs/PRScs.py
 REF_DIR=/home/lilab/software/PRScsx/LD_file/UKbiobank/ldblk_ukbb_eas
-BIM_PREFIX={path_to_work_dir}/Merge_FuDan_6021MDD_7318ctrl.indqc.snpqc.hg38.R2_03.snpqc.rmUnmap.rm-misCHR.rmDup.hg19
+BIM_PREFIX={path_to_work_dir}/Han_Chinese_MDD.QC.R2_08
 SST_FILE=sorted_meta_mdd2023diverse_EAS_TPMI-mdd.Diff-Model.I85.allele_aligned.forPRS-CS.txt
 OUT_DIR={path_to_project}/compare_EAS_depression/PRS-CS/meta_DEP-Meng_TPMI-predict-Han_Chinese_DEP.PRS-CS
 

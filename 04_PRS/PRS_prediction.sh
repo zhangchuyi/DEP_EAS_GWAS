@@ -2,7 +2,7 @@
 # =============================================================================
 # PRS prediction and association in the Han Chinese target samples
 # =============================================================================
-# As used in the study (2024-03-29). PRS are computed for the Han Chinese
+# As used in the study. PRS are computed for the Han Chinese
 # target samples (5,221 cases / 7,317 controls) with PLINK v1.9 --score using
 # the PRS-CS posterior effect estimates; case-control status is regressed on
 # the Z-score-standardised PRS by logistic regression (R glm, family =
@@ -16,7 +16,7 @@
 targetGWAS_path="/path/to/file"
 
 plink \
-	--bfile ${targetGWAS_path}/Merge_FuDan_6021MDD_7318ctrl.indqc.snpqc.hg38.R2_03.snpqc.rmUnmap.rm-misCHR.rmDup.hg19 \
+	--bfile ${targetGWAS_path}/Han_Chinese_MDD.QC.R2_08 \
 	--out meta_DEP-Meng_TPMI-predict-Han_Chinese_DEP.PRS-CS.score \
 	--score Merge_meta_DEP-Meng_TPMI-predict-Han_Chinese_DEP.PRS-CS_pst_eff_a1_b0.5_phiauto.txt 2 4 6
 # NOTE: the .profile output of plink --score is named after --out; rename it
