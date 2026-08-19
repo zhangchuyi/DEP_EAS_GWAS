@@ -7,6 +7,9 @@
 # DEP-Meng-TPMI training GWAS summary statistics; the EAS LD reference panel
 # (based on UK Biobank data) was provided by the PRS-CS developers
 # (https://github.com/getian107/PRScs).
+# As used in the study. PRS are computed for the Han Chinese
+# target samples (5,221 cases / 7,317 controls) with PLINK v1.9 --score using
+# the PRS-CS posterior effect estimates;
 # =============================================================================
 
 PRSCS=/home/lilab/software/PRScs/PRScs.py
