@@ -20,7 +20,7 @@ in the order the analyses appear in the Methods section.
 | [`09_Fine_mapping/`](09_Fine_mapping/) | Fine-mapping analysis | PolyFun + SuSiE |
 | [`10_SMR/`](10_SMR/) | SMR analysis | SMR |
 | [`11_Credible_gene_prioritization/`](11_Credible_gene_prioritization/) | Credible gene prioritization | MAGMA v1.10, PoPS |
-| [`12_Drug_target/`](12_Drug_target/) | Drug target analyses | DGIdb v5.0 API, Open Targets |
+| [`12_Drug_target/`](12_Drug_target/) | Drug target analyses | Open Targets |
 | [`Figure/`](Figure/) | Figures (Manhattan, regional, heatmaps, forest plots, etc.) | R (qqman, locuszoomr, pheatmap, CMplot, meta, …) |
 
 ## Notes on provenance
