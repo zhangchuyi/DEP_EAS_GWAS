@@ -1,20 +1,8 @@
-# PolyFun + SuSiE fine-mapping (example run on one locus)
-# NOTE: this is the template command used per locus; actual locus coordinates
-# were taken from the clumped GWS loci (see polyfun.input) and --n was set to
-# the trait-specific effective sample size (Neff). --geno points to the
-# 1000 Genomes EAS reference panel (PLINK prefix).
+#!/bin/bash
 
 mkdir -p LD_cache
 mkdir -p output
 
-python finemapper.py \
-    --geno  \
-    --sumstats example_data/chr1.finemap_sumstats.txt.gz \
-    --n 383290 \
-    --chr 1 \
-    --start 46000001 \
-    --end 49000001 \
-    --method susie \
-    --max-num-causal 5 \
-    --cache-dir LD_cache \
-    --out output/finemap.1.46000001.49000001.gz
+while IFS=' ' read -r chr start end out; do
+    python /home/lilab/software/polyfun/finemapper.py --geno Han_Chinese_MDD.QC.R2_08 --chr "$chr" --start "$start" --end "$end" --out "$out" --method susie --sumstats MTAG_EAS_DEP_NCrevision_dosage_add_TPMImdd-SZ_BD_INSO.finemap_sumstats.addSNPVAR.txt --allow-missing --memory 1 --max-num-causal 5
+done < polyfun.input
